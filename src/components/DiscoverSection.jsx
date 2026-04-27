@@ -11,7 +11,7 @@ const data = [
 
 const DiscoverSection = () => {
     return (
-        <div className="w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-10 py-8">
+        <div className="w-full max-w-8xl mx-auto px-4 md:px-6 lg:px-10 py-8">
 
             {/* Heading */}
             <h1 className="text-center text-xl sm:text-2xl md:text-3xl font-semibold mb-6 md:mb-8">

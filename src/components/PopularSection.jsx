@@ -55,7 +55,7 @@ const CategoryItem = ({ cat }) => (
 
 const PopularSection = () => {
     return (
-        <div className="w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-10 py-8">
+        <div className="w-full max-w-8xl mx-auto px-4 md:px-6 lg:px-10 py-8">
             <div className="flex flex-col md:flex-row md:items-center gap-6">
 
                 {/* Left text — centered on md+ like Image 2 */}
