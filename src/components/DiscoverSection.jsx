@@ -14,12 +14,16 @@ const DiscoverSection = () => {
         <div className="w-full max-w-8xl mx-auto px-4 md:px-6 lg:px-10 py-8">
 
             {/* Heading */}
-            <h1 className="text-center text-xl sm:text-2xl md:text-3xl font-semibold mb-6 md:mb-8">
-                Discover Your Next Adventure
-            </h1>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
+                Discover Your Next
+                <br className="block md:hidden" />
+                <span className="block md:inline text-center">
+                   { " "} Adventure
+                </span>
+            </h2>
 
             {/* Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-10">
 
                 {data.map((item, index) => (
                     <div key={index} className="w-full">
@@ -28,11 +32,11 @@ const DiscoverSection = () => {
                         <img
                             src={item.img}
                             alt={item.month}
-                            className="w-full aspect-[16/9] object-cover rounded-xl"
+                            className="w-full h-32 sm:h-40 md:h-44 lg:h-48 object-cover rounded-[25px]"
                         />
 
                         {/* Text */}
-                        <p className="mt-2 text-sm sm:text-base font-medium">
+                        <p className="mt-1 mb-2 text-lg sm:text-xl md:text-2xl font-semibold text-black">
                             {item.month}
                         </p>
 
