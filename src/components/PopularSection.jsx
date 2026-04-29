@@ -57,8 +57,8 @@ const PopularSection = () => {
             <div className="flex flex-col md:flex-row md:items-center gap-6">
 
                 {/* LEFT TEXT → 30% */}
-                <div className="w-full md:w-[30%] text-center md:text-left">
-                    <h2 className="font-[Poppins] text-[#212529] text-2xl md:text-3xl lg:text-[32px] font-semibold mb-3 text-center">
+                <div className="w-full md:w-[40%] text-center lg:text-left">
+                    <h2 className="font-[Poppins] text-[#212529] text-2xl md:text-3xl font-semibold mb-3 text-center">
                         Popular Categories
                     </h2>
                     <p className="font-[poppins] text-base leading-6 font-normal text-[#212529] text-center max-w-[230px] min-[400px]:max-w-[450px] md:max-w-[600px] mx-auto">
@@ -67,19 +67,32 @@ const PopularSection = () => {
                         We offer adventure activities in Uttrakhand, Himachal, J & K, Ladakh, Sikkim, Karnataka, Maharashtra, Nepal
                     </p>
                 </div>
-
-                {/* RIGHT → auto fill remaining space */}
-                <div className="hidden md:flex flex-1 gap-4 overflow-x-auto pb-2">
+                   
+                {/* laptop view */}
+                <div className="hidden lg:flex w-full gap-4 px-2 py-6">
                     {categories.map((cat, i) => (
-                        <CategoryItem key={i} cat={cat} />
+                        <div key={i} className="flex-1 flex flex-col items-center gap-3 min-w-0">
+
+                            <div className="w-full max-w-[70px] lg:max-w-[50px] xl:max-w-[90px] aspect-square rounded-full overflow-hidden">
+                                <img
+                                    src={cat.img}
+                                    alt={cat.label}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+
+                            <span className="font-[poppins] text-sm lg:text-base xl:text-lg text-center text-[#212529]">
+                                {cat.label}
+                            </span>
+                        </div>
                     ))}
                 </div>
 
                 {/* MOBILE GRID */}
-                <div className="grid grid-cols-4 gap-5 md:hidden w-full  px-2 py-9">
+                <div className="grid grid-cols-4 gap-5 lg:hidden w-full  px-2 py-9">
                     {categories.map((cat, i) => (
                         <div key={i} className="flex flex-col items-center gap-3 cursor-pointer group">
-                            <div className="w-12 h-12 sm:w-14 sm:14 md:w-16 md:h-16 lg:w-18 lg:h-18 rounded-full overflow-hidden border-none ">
+                            <div className="aspect-square rounded-full overflow-hidden border-none ">
                                 <img
                                     src={cat.img}
                                     alt={cat.label}

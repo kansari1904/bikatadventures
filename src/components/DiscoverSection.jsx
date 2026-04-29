@@ -33,7 +33,7 @@ const DiscoverSection = () => {
                             <img
                                 src={item.img}
                                 alt={item.month}
-                                className="w-full h-full object-cover rounded-2xl"
+                                className="w-full h-full object-cover rounded-xl"
                             />
                         </div>
 
