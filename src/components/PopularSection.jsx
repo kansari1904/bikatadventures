@@ -37,8 +37,7 @@ const categories = [
 
 const CategoryItem = ({ cat }) => (
     <div className="flex flex-col items-center gap-2 cursor-pointer group shrink-0">
-        <div className="w-24 h-24 sm:w-[100px] sm:h-[100px] rounded-full overflow-hidden border-2 border-gray-200
-            group-hover:border-blue-400 group-hover:scale-105 transition-all duration-200">
+        <div className="w-24 h-24 sm:w-25 sm:h-25 rounded-full overflow-hidden border-none">
             <img
                 src={cat.img}
                 alt={cat.label}
@@ -59,13 +58,13 @@ const PopularSection = () => {
 
                 {/* LEFT TEXT → 30% */}
                 <div className="w-full md:w-[30%] text-center md:text-left">
-                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 text-center">
+                    <h2 className="font-[Poppins] text-[#212529] text-2xl md:text-3xl lg:text-[32px] font-semibold mb-3 text-center">
                         Popular Categories
                     </h2>
-                    <p className="text-sm sm:text-base md:text-[17px] text-[#212529] leading-relaxed text-center">
+                    <p className="font-[poppins] text-base leading-6 font-normal text-[#212529] text-center max-w-[230px] min-[400px]:max-w-[450px] md:max-w-[600px] mx-auto">
                         Browse through these categories to find the best adventure for yourself.
                         We organise Trekking, Cycling, Skiing & Mountaineering Expeditions.
-                        We offer adventure activities in Uttrakhand, Himachal,  J & K, Ladakh, Sikkim, Karnataka, Maharashtra & Nepal
+                        We offer adventure activities in Uttrakhand, Himachal, J & K, Ladakh, Sikkim, Karnataka, Maharashtra, Nepal
                     </p>
                 </div>
 
@@ -77,18 +76,17 @@ const PopularSection = () => {
                 </div>
 
                 {/* MOBILE GRID */}
-                <div className="grid grid-cols-2 gap-6 md:hidden w-full">
+                <div className="grid grid-cols-4 gap-5 md:hidden w-full  px-2 py-9">
                     {categories.map((cat, i) => (
-                        <div key={i} className="flex flex-col items-center gap-2 cursor-pointer group">
-                            <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 border-gray-200
-                                group-hover:border-blue-400 group-hover:scale-105 transition-all duration-200">
+                        <div key={i} className="flex flex-col items-center gap-3 cursor-pointer group">
+                            <div className="w-12 h-12 sm:w-14 sm:14 md:w-16 md:h-16 lg:w-18 lg:h-18 rounded-full overflow-hidden border-none ">
                                 <img
                                     src={cat.img}
                                     alt={cat.label}
                                     className="w-full h-full object-cover"
                                 />
                             </div>
-                            <span className="text-sm font-medium text-center text-gray-700">
+                            <span className="font-[poppins] text-sm text-center text-[#212529]">
                                 {cat.label}
                             </span>
                         </div>

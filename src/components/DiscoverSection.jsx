@@ -11,38 +11,38 @@ const data = [
 
 const DiscoverSection = () => {
     return (
-        <div className="w-full max-w-8xl mx-auto px-4 md:px-6 lg:px-10 py-8">
+        <div className="w-full max-w-8xl mx-auto px-4 md:px-6 lg:px-3 py-17 md:py-10">
 
             {/* Heading */}
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
+            <h2 className="font-[Poppins] text-2xl md:text-3xl lg:text-[32px] text-center leading-8 md:leading-9 lg:leading-[38.4px] font-semibold text-[#212529] mb-8.75 ">
                 Discover Your Next
-                <br className="block md:hidden" />
-                <span className="block md:inline text-center">
+                <br className="block min-[420px]:hidden" />
+                <span className="block min-[420px]:inline text-center">
                    { " "} Adventure
                 </span>
             </h2>
 
             {/* Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-10">
+            <div className="px-4 grid grid-cols-2 min-[577px]:grid-cols-3 gap-5">
 
                 {data.map((item, index) => (
                     <div key={index} className="w-full">
 
                         {/* Image */}
-                        <img
-                            src={item.img}
-                            alt={item.month}
-                            className="w-full h-32 sm:h-40 md:h-44 lg:h-48 object-cover rounded-[25px]"
-                        />
+                        <div className="w-full aspect-389/177">
+                            <img
+                                src={item.img}
+                                alt={item.month}
+                                className="w-full h-full object-cover rounded-2xl"
+                            />
+                        </div>
 
                         {/* Text */}
-                        <p className="mt-1 mb-2 text-lg sm:text-xl md:text-2xl font-semibold text-black">
+                        <p className="font-[Poppins] mt-2 text-medium sm:text-lg md:text-xl font-medium text-black -mb-1">
                             {item.month}
                         </p>
-
                     </div>
                 ))}
-
             </div>
         </div>
     );
