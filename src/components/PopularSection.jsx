@@ -92,7 +92,7 @@ const PopularSection = () => {
                 <div className="grid grid-cols-4 gap-5 lg:hidden w-full  px-2 py-9">
                     {categories.map((cat, i) => (
                         <div key={i} className="flex flex-col items-center gap-3 cursor-pointer group">
-                            <div className="aspect-square rounded-full overflow-hidden border-none ">
+                            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 aspect-square rounded-full overflow-hidden">
                                 <img
                                     src={cat.img}
                                     alt={cat.label}
